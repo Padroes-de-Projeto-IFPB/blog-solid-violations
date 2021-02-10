@@ -10,11 +10,13 @@ import java.util.logging.Logger;
 public class PostagemDAO {
 
     private String arquivoBanco;
+
     public PostagemDAO(String arquivoBanco) {
         this.arquivoBanco = arquivoBanco;
     }
 
     private Connection connect() {
+        // TODO candidato para inversão de dependência criar classe Abstrata AbstractDAO<T>
         try (Connection connection = DriverManager.getConnection("jdbc:sqlite:"+this.arquivoBanco)) {
             Statement statement = connection.createStatement();
 

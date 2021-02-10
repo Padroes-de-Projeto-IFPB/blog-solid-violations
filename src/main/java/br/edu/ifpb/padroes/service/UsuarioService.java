@@ -12,8 +12,5 @@ public interface UsuarioService {
     void removerUsuario(Usuario usuario);
     List<Usuario> listarUsuarios(Usuario usuario);
     Usuario recuperarUsuario(Long id);
-    void adicionarPostagem(Postagem postagem);
-    void removerPostagem(Postagem postagem);
-    void atualizarPostagem(Postagem postagem);
-    void adicionarResposta(Postagem postagem, Postagem resposta);
+
 }

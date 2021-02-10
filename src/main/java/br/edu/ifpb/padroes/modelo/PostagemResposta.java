@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class PostagemResposta extends Postagem {
 
+    // TODO é uma postagem e tem postagem ele é mais que? Possível Liskov aqui
     private Date data;
 
     private Postagem postagem;

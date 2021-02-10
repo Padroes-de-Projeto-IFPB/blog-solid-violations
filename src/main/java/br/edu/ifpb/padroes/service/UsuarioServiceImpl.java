@@ -9,6 +9,7 @@ import java.util.List;
 
 public class UsuarioServiceImpl implements UsuarioService {
 
+
     private UsuarioDAO usuarioDAO = new UsuarioDAO("banco.db");
     private PostagemDAO postagemDAO = new PostagemDAO("banco.db");
 
@@ -39,6 +40,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public void adicionarPostagem(Postagem postagem) {
+        // TODO open/closed
         if (postagem.getPostagemTipo().equals(Postagem.PostagemTipo.PUBLICA)) {
             this.postagemDAO.addPostagemPublica(postagem);
         } else if (postagem.getPostagemTipo().equals(Postagem.PostagemTipo.PRIVADA)) {
