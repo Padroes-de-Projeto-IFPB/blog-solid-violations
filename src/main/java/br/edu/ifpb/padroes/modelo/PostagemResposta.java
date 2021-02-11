@@ -23,4 +23,12 @@ public class PostagemResposta extends Postagem {
     public void setData(Date data) {
         this.data = data;
     }
+
+    @Override
+    public Usuario getUsuario() {
+        if (usuario.getPostagens().size() == 0) {
+            return null;
+        }
+        return this.usuario;
+    }
 }
