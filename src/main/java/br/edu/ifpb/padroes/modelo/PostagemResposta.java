@@ -24,11 +24,4 @@ public class PostagemResposta extends Postagem {
         this.data = data;
     }
 
-    @Override
-    public Usuario getUsuario() {
-        if (usuario.getPostagens().size() == 0) {
-            return null;
-        }
-        return this.usuario;
-    }
 }
